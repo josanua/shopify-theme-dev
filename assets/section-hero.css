@@ -7,8 +7,13 @@ h2.banner__heading{
     font-family: 'GT America';
     font-style: normal;
     font-weight: 700;
-    font-size: 150px;
+    font-size: 105px;
     line-height: 130px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.hero-arrow-down-img {
+    position: absolute;
+    bottom: 30px;
 }
