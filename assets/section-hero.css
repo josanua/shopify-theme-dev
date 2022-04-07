@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'GT America';
+    src: url('GT-America-Bold.ttf')  format('truetype')
+}
+
+h2.banner__heading{
+    font-family: 'GT America';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 130px;
+    text-align: center;
+    text-transform: uppercase;
+}
