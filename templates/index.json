@@ -74,10 +74,50 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collections-slider": {
+      "type": "collections-slider",
+      "blocks": {
+        "b131bb49-114f-4ce4-9c3c-864554afbe09": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "men"
+          }
+        },
+        "d6738e42-af67-4968-b58e-48e6ec678306": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "women"
+          }
+        },
+        "62a43a53-8e50-46b2-8b14-fabc5903a6d6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "kids"
+          }
+        },
+        "4625ec16-d344-45f5-9052-5231a6e5e8ec": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "b131bb49-114f-4ce4-9c3c-864554afbe09",
+        "d6738e42-af67-4968-b58e-48e6ec678306",
+        "62a43a53-8e50-46b2-8b14-fabc5903a6d6",
+        "4625ec16-d344-45f5-9052-5231a6e5e8ec"
+      ],
+      "settings": {
+        "navigation_amount": 3,
+        "navigation_color": ""
+      }
     }
   },
   "order": [
     "hero",
-    "164935029668f84035"
+    "164935029668f84035",
+    "collections-slider"
   ]
 }

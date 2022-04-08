@@ -1,4 +1,4 @@
-{% comment %} <div class="featured-cards">
+<div class="featured-cards">
   <div class="carousel">
       {% for block in section.blocks %}
       {% assign product = all_products[block.settings.product_item] %}
@@ -13,7 +13,7 @@
       {% endfor %}
   </div>
 </div>
-{% endcomment %}
+
 {% comment %} {% assign nav_range = section.settings.navigation_amount %} 
 {% style %}
 
@@ -67,6 +67,19 @@
 
 {% schema %}
 {
-  "name": "Collections Slider"
+  "name": "Collections Slider",
+   "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
