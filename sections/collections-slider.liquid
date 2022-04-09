@@ -1,3 +1,4 @@
+{{ 'collection-slider.css' | asset_url | stylesheet_tag }}
 {{ 'swiper-bundle.css' | asset_url | stylesheet_tag }}
 {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
 
@@ -7,21 +8,27 @@
 
 <!-- Slider main container -->
 <div class="swiper">
+  
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     {% for block in section.blocks %}
-    {%- liquid assign b = block.settings -%}
+      {%- liquid assign b = block.settings -%}
 
-    <div class="swiper-slide">
-      <h2>{{ b.collection.title }}</h2>
-    
-      {% comment %} <img src="" /> {% endcomment %}
-      {% comment %} {{  b.collection.image | image_url: width: 2048 | image_tag }} {% endcomment %}
-    </div>
+      <div class="swiper-slide" >
+          <div class="collection-img-container" style="background-image: url({{ b.collection | image_url  }})">
+            <div class="collection-slider-title-wrap">
+              <span class="collection-slider-title">{{ b.collection.title }}</span>
+            </div>
+            <div class="banner__buttons">
+              <a href="/collections/all" class="button button--secondary">Shop Collection</a>
+            </div>
+          </div>
+      </div>
 
-  {% endfor %}  
+    {% endfor %}  
   </div>
+
    <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
@@ -29,14 +36,23 @@
 
 <script>
   const swiper = new Swiper('.swiper', {
-    speed: 400,
-    spaceBetween: 100,
+    slidesPerView: 4,
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      480: {}
+    }
   });
 </script>
 
 {% schema %}
 {
   "name": "Collections Slider",
+  "tag": "section",
+   "class": "collection-slider",
    "blocks": [
     {
       "type": "featured_collection",
