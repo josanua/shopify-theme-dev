@@ -20,8 +20,8 @@
             <div class="collection-slider-title-wrap">
               <span class="collection-slider-title">{{ b.collection.title }}</span>
             </div>
-            <div class="banner__buttons">
-              <a href="/collections/all" class="button button--secondary">Shop Collection</a>
+            <div class="slide__button">
+              <a href="{{ b.collection.url }}" class="button button--secondary">Shop Collection</a>
             </div>
           </div>
       </div>
@@ -36,15 +36,22 @@
 
 <script>
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
+    slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
     breakpoints: {
-      560: {
-        slidesPerView: 2,
+      320: {
+        slidesPerView: 1,
       },
-      980: {
-        slidesPerView: 3,
+      // 480: {},
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      },
+      1400: {
+        slidesPerView: 4
       },
     }
   });
