@@ -30,23 +30,23 @@
   </div>
 
   <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <!-- <div class="swiper-button-prev">&nbsp;</div> -->
+  <div class="swiper-button-next">
+    <img src={{ 'arrow-circle-right.png' | asset_img_url  }} class="hero-arrow-right-img"/>
+  </div>
 </div>
 
 <script>
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
-    //spaceBetween: 30,
-    //loop: true,
+    spaceBetween: 30,
+    loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        // prevEl: ".swiper-button-prev"
     },
     breakpoints: {
-      //320: {
-        //slidesPerView: 1,
-      //},
+      // 320: {},
       // 480: {},
       768: {
         slidesPerView: 2
