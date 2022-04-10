@@ -48,14 +48,6 @@
     align-items: center;
 }
 
-/* ----------- iPad Pro ----------- */
-/* Portrait and Landscape */
-/* @media only screen 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-    .swiper-slide .slide__button {opacity: 1;}
-} */
-
 @media only screen and (min-width: 1200px) {
     .swiper-slide .slide__button {
         opacity: 0;
