@@ -7,9 +7,14 @@
     height: 500px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 100% 100%;
     flex-direction: column;
     display: flex;
+    transition: background-size .5s;
+}
+.collection-img-container:hover {
+    background-size: 105% 105%;
 }
 .collection-slider-title {    
     font-family: 'GT America';
