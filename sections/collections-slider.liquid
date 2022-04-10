@@ -1,5 +1,5 @@
 {{ 'collection-slider.css' | asset_url | stylesheet_tag }}
-{{ 'swiper-bundle.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
 
 {%- liquid 
@@ -25,24 +25,28 @@
             </div>
           </div>
       </div>
-
     {% endfor %}  
+
   </div>
 
-   <!-- If we need navigation buttons -->
+  <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
 
 <script>
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
+    slidesPerView: 1,
+    //spaceBetween: 30,
+    //loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
+      //320: {
+        //slidesPerView: 1,
+      //},
       // 480: {},
       768: {
         slidesPerView: 2
