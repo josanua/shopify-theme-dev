@@ -1,20 +1,19 @@
 .collection-slider {
-    margin: 60px 0;
-    padding: 0px 30px;
+    margin: 10px 0;
+    padding: 0px 10px;
 }
 .collection-img-container {
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-size: cover; */
-    background-size: 100% 100%;
+    background-size: 100%;
     flex-direction: column;
     display: flex;
     transition: background-size .5s;
 }
 .collection-img-container:hover {
-    background-size: 105% 105%;
+    background-size: 105%;
 }
 .collection-slider-title {    
     font-family: 'GT America';
@@ -62,7 +61,20 @@
     padding-right: 15px;
 }
 
+/* ----------- Responsive ----------- */
+@media only screen and (max-width: 320px) {
+    .collection-slider {
+        margin: 0;
+        padding: 0px 5px;
+    }
+    .swiper-slide .slide__button{
+        bottom: 10%;
+    }
+}
 @media only screen and (min-width: 1200px) {
+    .collection-slider {
+        margin: 50px 30px;
+    }
     .swiper-slide .slide__button {
         opacity: 0;
         transition: opacity 0.5s;
